@@ -1,5 +1,8 @@
+import java.util.Scanner;
+
 public class Geometry {
     public static void main(String[] args){
-       //code goes here    
+       Scanner scanner = new Scanner(System.in);
+       System.out.println("\nWelcome to the Java geometry calculator!  Please make your selection.\n1. Cone\n2. Cylinder\n3. Sphere\n0. Quit");
       }
 }
