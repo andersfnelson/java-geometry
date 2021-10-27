@@ -1,4 +1,4 @@
-
+import java.util.Scanner;
 
 public class Cylinder {
     public float volume (int radius, int height){
@@ -22,5 +22,24 @@ public class Cylinder {
         float topBottomSurfaceArea;
         topBottomSurfaceArea = (float) Math.PI * radius * radius;
         return topBottomSurfaceArea;
+    }
+    public void Prompt(){
+        Scanner s = new Scanner(System.in);
+        System.out.println("Cylinder");
+        System.out.print("Please enter the radius: ");
+        String input1 = s.nextLine();
+        System.out.print("Please enter the height: ");
+        String input2 = s.nextLine();
+        try{
+            int radius = Integer.parseInt(input1);
+            int height = Integer.parseInt(input2);
+            System.out.println("The volume is: " + volume(radius, height));
+            System.out.println("The surface area is: " + surfaceArea(radius, height));
+            System.out.println("The lateral surface area is: " + lateralSurfaceArea(radius, height));
+            System.out.println("The top or bottom surface area is: " + topBottomSurfaceArea(radius));
+        }
+        catch(Exception e){
+            System.out.println("Error with input. Please try again.");
+        }
     }
 }
